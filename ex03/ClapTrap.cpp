@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("default"), hit(10), energy(10), damge(0)
+ClapTrap::ClapTrap() : name("ClapTrap"), hit(10), energy(10), damge(0)
 {
 	std::cout << name << " Created !" << std::endl;
 }

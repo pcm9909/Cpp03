@@ -1,3 +1,7 @@
 #include "DiamondTrap.hpp"
 
-int main(){}
+int main()
+{
+	DiamondTrap dt;
+	dt.whoAmI();
+}
