@@ -2,9 +2,12 @@
 
 int main()
 {
-	ClapTrap hi("hi");
-	ClapTrap bye(hi);
-	hi.beRepaired(10);
+	ClapTrap claptrap("ClapTrap");
+	ClapTrap claptrap2(claptrap);
+	ClapTrap claptrap3 = claptrap;
 
-	hi.attack("asd");
+	claptrap.attack("target");
+	claptrap.takeDamage(5);
+	claptrap.beRepaired(5);
+	return 0;
 }

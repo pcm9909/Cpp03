@@ -16,9 +16,9 @@ class ClapTrap
 		void beRepaired(unsigned int amount);
 	private:
 		std::string name;
-		int hit = 10;
-		int energy = 10;
-		int damge = 0;
+		int hit;
+		int energy;
+		int damge;
 };
 
 #endif
