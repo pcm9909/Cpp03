@@ -6,12 +6,12 @@
 class ScanTrap : public ClapTrap
 {
 	public:
-		ScanTrap();
+		ScanTrap(std::string name);
 		~ScanTrap();
-		ScanTrap(const ScanTrap &ct);
-		ScanTrap &operator= (const ScanTrap &ct);
-	private
-
+		ScanTrap(const ScanTrap &st);
+		ScanTrap &operator= (const ScanTrap &st);
+		void attack(const std::string& target);
+		void guardGate();
 };
 
 #endif

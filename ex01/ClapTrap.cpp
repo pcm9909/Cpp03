@@ -1,8 +1,7 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) : name(name), hit(10), energy(10), damge(0)
 {
-	name = name;
 	std::cout << name << " Created !" << std::endl;
 }
 
@@ -13,8 +12,10 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap &ct)
 {
+	std::cout << "Copy Constructor Called" << std::endl;
 	*this = ct;
 }
+
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &ct)
 {
@@ -24,6 +25,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &ct)
 		this->hit = ct.hit;
 		this->energy = ct.energy;
 		this->damge = ct.damge;
+		std::cout << "Assignation Operator Called" << std::endl;
 	}
 	return *this;
 }
@@ -50,6 +52,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 	{
 		this->hit -= amount;
 		this->energy -= -1;
+		std::cout << "ClapTrap " << name
+				  << " take " << amount
+				  << " points!" << std::endl;
 	}
 	else
 	{
@@ -63,6 +68,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->hit += amount;
 		this->energy -= -1;
+		std::cout << "ClapTrap " << name
+				  << " be repaired " << amount
+				  << " points!" << std::endl;
 	}
 	else
 	{
